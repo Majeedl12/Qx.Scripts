@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Back</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0a0a0a;
+      color: #ddd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 16px;
+      min-height: 100vh;
+    }
+
+    .welcome-text {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      text-align: center;
+      background: linear-gradient(90deg, #666 0%, #aaa 50%, #666 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1px;
+    }
+
+    .by-majed {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 28px;
+      color: #666;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .game-card {
+      background: rgba(255, 255, 255, 0.06);
+      /* backdrop-filter removed */
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      position: relative;
+    }
+
+    .game-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .game-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #1a1a1a;
+      opacity: 0.9;
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      transition: opacity 0.25s, border-color 0.25s;
+    }
+
+    .game-card:hover img {
+      opacity: 1;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .working-badge {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      letter-spacing: 0.5px;
+      z-index: 2;
+    }
+
+    .game-info {
+      padding: 20px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .game-name {
+      font-size: 1.7rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #777 0%, #bbb 50%, #777 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.5px;
+    }
+
+    .game-details {
+      font-size: 1rem;
+      line-height: 1.7;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 14px 18px;
+      border-radius: 14px;
+      border-left: 4px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      text-align: left;
+      color: #ccc;
+      transition: border-color 0.25s;
+    }
+
+    .game-card:hover .game-details {
+      border-left-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .download-btn {
+      background: #1a1a1a;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 13px 32px;
+      border-radius: 14px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: block;
+      margin: 6px auto 0;
+      text-decoration: none;
+      transform: scale(1);
+    }
+
+    .download-btn:hover {
+      background: #252525;
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: scale(1.03);
+    }
+
+    .download-btn:active {
+      transform: scale(0.97);
+    }
+
+    /* إزالة جميع الأنيميشنات المستمرة لتخفيف الحمل */
+  </style>
+</head>
+<body>
+
+  <div class="welcome-text">Welcome Back</div>
+  <div class="by-majed">QX Scripts</div>
+
+  <div class="container">
+
+    <!-- DELTA -->
+    <div class="game-card">
+      <img src="https://cdn.discordapp.com/attachments/1505339718081183874/1506480621885853717/Screenshot_20260520_051601_com_discord_MainActivity.jpg?ex=6a0e6ae9&is=6a0d1969&hm=510d8df09ddddef7532553ddc5c576dfd8320c8b14d0ef661ce79c2480a45bf3&" alt="DELTA" loading="lazy">
+      <span class="working-badge">Working</span>
+      <div class="game-info">
+        <div class="game-name">DELTA</div>
+        <div class="game-details">
+          + Updated to 2.720.1167<br>
+          + Improved Performance<br>
+          + Fixed VideoFrame<br>
+          + Still Undetected<br>
+          + Bug Fixes
+        </div>
+        <a href="https://delta.filenetwork.vip/file/Delta-2.720.1167.apk" class="download-btn">Download</a>
+      </div>
+    </div>
+
+    <!-- Arceus X V5 -->
+    <div class="game-card">
+      <img src="https://cdn.discordapp.com/attachments/1505339718081183874/1506481374477942885/images.jpg?ex=6a0e6b9c&is=6a0d1a1c&hm=3e0d2dc62737c3f8d89438b39999d15b60565ab4662e322c5bfdf3a94113aa2d&" alt="Arceus X V5" loading="lazy">
+      <span class="working-badge">Working</span>
+      <div class="game-info">
+        <div class="game-name">Arceus X V5</div>
+        <div class="game-details">
+          The first AI-powered executor. Smarter scripts. Faster updates. Secure by design. A clean, distraction-free experience built for performance.
+        </div>
+        <a href="https://www.mediafire.com/file/efgg72uhivrnazb/Arceus_X_V5_.apk/file?dkey=k9s8was42hf&r=1508" class="download-btn">Download</a>
+      </div>
+    </div>
+
+    <!-- Arceus X Neo -->
+    <div class="game-card">
+      <img src="https://cdn.discordapp.com/attachments/1505339718081183874/1506482654239920349/images.jpg?ex=6a0e6ccd&is=6a0d1b4d&hm=bc59e708a310b4aa6db6a287fe632ac77613e2859997cf5f8bd1d35f6aaceb9a&" alt="Arceus X Neo" loading="lazy">
+      <span class="working-badge">Working</span>
+      <div class="game-info">
+        <div class="game-name">Arceus X Neo</div>
+        <div class="game-details">
+          - Ban Bypass : Still Undetected<br>
+          - Fixed crash when opening the application<br>
+          - Arceus remains fully ud.
+        </div>
+        <a href="https://www.mediafire.com/file/zcpwjp9jrmix53b/Arceus_X_NEO_.apk/file?dkey=5qbcs0s6czq&r=1061" class="download-btn">Download</a>
+      </div>
+    </div>
+
+    <!-- CODEX -->
+    <div class="game-card">
+      <img src="https://cdn.discordapp.com/attachments/1505339718081183874/1506485408945406003/9d2d3723bf774cbecd88d4b8422e7621_1747592835213-Codex.png?ex=6a0e6f5e&is=6a0d1dde&hm=eb9b8d9706f2dd039ca29a1634dccaf14c66d266e0f4f83ae813bb57cf00dbd4&" alt="CODEX" loading="lazy">
+      <span class="working-badge">Working</span>
+      <div class="game-info">
+        <div class="game-name">CODEX</div>
+        <div class="game-details">
+          Codex, the best FREE Roblox Exploit/Executor for Android, iOS & PC. Bypass Byfron Anti-Cheat & Exploit on your favorite Roblox games, with no key system & no crashes!
+        </div>
+        <a href="https://www.mediafire.com/file/h6jr4s90d6o62qw/Codex_v2.720.apk/file?dkey=bqgue28fz5x&r=1320" class="download-btn">Download</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // تأثير دخول خفيف بالـ GPU فقط
+    gsap.from(".game-card", {
+      duration: 0.4,
+      y: 20,
+      opacity: 0,
+      stagger: 0.1,
+      ease: "power2.out"
+    });
+  </script>
+</body>
+</html>
